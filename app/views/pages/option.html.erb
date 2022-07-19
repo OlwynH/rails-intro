@@ -1,0 +1,11 @@
+<h2>See our countries!</h2>
+<ul>
+  <% @countries.each do |country| %>
+    <li> <%= country.capitalize %></li>
+  <% end %>
+</ul>
+
+<form action="/option" method="get">
+<input type="text" name="country" value="<%= params[:country] %>" placeholder="What country are you going to?">
+<input type="submit">
+</form>
